@@ -1,5 +1,5 @@
 <!--
-How to Install and Set Up Windows 11 Without an Internet Connection - https://www.makeuseof.com/windows-11-set-up-without-internet-connection/
+[How to Install and Set Up Windows 11 Without an Internet Connection]([https://getemoji.com/](https://www.makeuseof.com/windows-11-set-up-without-internet-connection/))
 -->
 
 # How to Install and Set Up Windows 11 Without an Internet Connection
