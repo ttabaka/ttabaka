@@ -4,7 +4,7 @@ Markdown Cheat Sheet - https://www.markdownguide.org/cheat-sheet/
 
 GetEmoji - https://getemoji.com/
 
-#### I'm a software engineer, author, blogger, and abstract artist who believes in helping others to make us happier and healthier.
+#### Live, Laugh, Learn
 
 #### Blogs
 - 📝 Find my blog articles [here](https://tedtabaka.com)
