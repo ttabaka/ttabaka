@@ -2,6 +2,8 @@
 
 [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/){:target="_blank"}.
 
+[go](http://stackoverflow.com){:target="_blank" rel="noopener"}
+
 GetEmoji - https://getemoji.com/
 
 #### Live, Laugh, Learn
