@@ -1,4 +1,4 @@
-[HDMI Expansion Card Power Saving Rework]([https://guides.frame.work/Guide/HDMI+Expansion+Card+power+saving+rework+(Beta)/193]
+[HDMI Expansion Card Power Saving Rework](https://guides.frame.work/Guide/HDMI+Expansion+Card+power+saving+rework+(Beta)/193)
 
 # HDMI Expansion Card Power Saving Rework (Beta)
 
