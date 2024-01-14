@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
+[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/){:target="_blank"}.
 
 GetEmoji - https://getemoji.com/
 
