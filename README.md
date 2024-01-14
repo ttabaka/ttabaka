@@ -1,10 +1,8 @@
 ### Hi there 👋
 
-[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/){:target="_blank"}.
+[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
-[go](http://stackoverflow.com){:target="_blank" rel="noopener"}
-
-GetEmoji - https://getemoji.com/
+[GetEmoji](https://getemoji.com/)
 
 #### Live, Laugh, Learn
 
