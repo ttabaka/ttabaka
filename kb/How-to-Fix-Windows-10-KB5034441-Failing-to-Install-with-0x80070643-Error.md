@@ -4,11 +4,11 @@
 
 # How to Fix Windows 10 KB5034441 Failing to Install with 0x80070643 Error
 
-Open Command Prompt (cmd) as an administrator.
-Check if WinRE is installed by running reagentc /info. If it’s there, you’ll see a “Windows RE location” with a path.
-Turn off WinRE by running reagentc /disable.
-Get ready to make a new recovery partition by shrinking the OS partition.
-Use diskpart by running diskpart in Command Prompt.
+1. Open Command Prompt (cmd) as an administrator.
+2. Check if WinRE is installed by running reagentc /info. If it’s there, you’ll see a “Windows RE location” with a path.
+3. Turn off WinRE by running reagentc /disable.
+4. Get ready to make a new recovery partition by shrinking the OS partition.
+5. Use diskpart by running diskpart in Command Prompt.
 List the disks and select the one with OS by running the command sel disk<OS disk index>.
 Find and select the OS partition by running the command sel part<OS partition index>.
 After selecting the partition, run the command: shrink desired=250 minimum=250.
