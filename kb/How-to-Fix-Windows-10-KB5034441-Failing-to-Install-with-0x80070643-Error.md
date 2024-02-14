@@ -1,5 +1,5 @@
 <!--
-[How to fix Windows 10 KB5034441 failing to install with 0x80070643 error]([[https://www.makeuseof.com/windows-11-set-up-without-internet-connection/](https://www.windowslatest.com/2024/01/15/windows-10-kb5034441-fails-with-a-0x80070643-error-but-theres-a-fix/)]
+[How to fix Windows 10 KB5034441 failing to install with 0x80070643 error]([[[https://www.makeuseof.com/windows-11-set-up-without-internet-connection/](https://www.windowslatest.com/2024/01/15/windows-10-kb5034441-fails-with-a-0x80070643-error-but-theres-a-fix/)](https://www.windowslatest.com/2024/01/15/windows-10-kb5034441-fails-with-a-0x80070643-error-but-theres-a-fix/)]
 -->
 
 # How to Fix Windows 10 KB5034441 Failing to Install with 0x80070643 Error
