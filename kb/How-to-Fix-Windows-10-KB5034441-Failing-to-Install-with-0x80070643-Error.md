@@ -1,4 +1,8 @@
-URL: https://www.windowslatest.com/2024/01/15/windows-10-kb5034441-fails-with-a-0x80070643-error-but-theres-a-fix/
+<!--
+[How to fix Windows 10 KB5034441 failing to install with 0x80070643 error]([[https://www.makeuseof.com/windows-11-set-up-without-internet-connection/](https://www.windowslatest.com/2024/01/15/windows-10-kb5034441-fails-with-a-0x80070643-error-but-theres-a-fix/)]
+-->
+
+# How to Install and Set Up Windows 11 Without an Internet Connection
 
 Open Command Prompt (cmd) as an administrator.
 Check if WinRE is installed by running reagentc /info. If it’s there, you’ll see a “Windows RE location” with a path.
