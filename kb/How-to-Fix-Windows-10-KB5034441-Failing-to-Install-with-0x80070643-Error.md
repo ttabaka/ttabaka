@@ -12,12 +12,16 @@
 6. select disk 0
 7. list disk
 8. list partition
-9. select partition 4
-10. delete partition override
-11. list partition
-12. create partition primary id=de94bba4-06d1-4d40-a16a-bfd50179d6ac
-13. gpt attributes =0x8000000000000001
-14. list partition
-15. exit
-16. reagentc /enable
-17. reagentc /info
+9. select partition 3
+10. list partition
+11. shrink desired=250 minimum=250
+12. select partition 4
+13. list partition
+14. delete partition override
+15. list partition
+16. create partition primary id=de94bba4-06d1-4d40-a16a-bfd50179d6ac
+17. gpt attributes =0x8000000000000001
+18. list partition
+19. exit
+20. reagentc /enable
+21. reagentc /info
