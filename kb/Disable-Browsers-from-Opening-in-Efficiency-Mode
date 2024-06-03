@@ -6,4 +6,4 @@ Under "Target:" enter "--disable-features=UseEcoQoSForBackgroundProcess"
 
 Firefox: about:config
 
- dom.ipc.processPriorityManager.backgroundUsesEcoQoS
+ "dom.ipc.processPriorityManager.backgroundUsesEcoQoS" to false
