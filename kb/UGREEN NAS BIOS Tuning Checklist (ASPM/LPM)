@@ -1,0 +1,26 @@
+Getting into the BIOS
+Reboot the NAS and tap Ctrl+F2 (or Ctrl+F12) right at power-on, or SSH into UGOS and run sudo systemctl reboot --firmware-setup to land there automatically next reboot.
+
+Chipset → System Agent (SA) Configuration → PCI Express Configuration
+This is where the individual PCIe root ports live (Root Port 1, 2, 3, plus the M.2 SSD1 slot). Go into each one and set ASPM to Disabled.
+
+M.2 SSD1: confirmed already Disabled ✓
+Root Port 1 / 2 / 3: still need to check each — you saw the list but hadn't opened them individually yet
+
+Advanced → SATA Configuration
+
+Aggressive LPM Support → set to Disabled (this was Enabled — the SATA-side equivalent of ASPM, and a common cause of drive stalls/dropouts on its own)
+Leave SATA Mode Selection on AHCI and SATA Test Mode on Disabled — those are already correct
+
+Still open / worth resolving
+
+The BIOS watchdog timer — we flagged early on that it can force-reboot the system if UGOS isn't detected for a couple minutes, but we never located and disabled it in this session. Worth hunting down (often under Advanced, sometimes in a Super I/O or EC-related submenu) so it doesn't interrupt future BIOS visits.
+Your SATA ports showed "No Install" for all three — if your actual drive bays were expected to show up there and didn't, they're likely on a separate controller with its own settings menu, which would need the same ASPM/LPM check independently.
+
+Only if problems persist after the above
+
+SA PCIe LTR Configuration → Force LTR Override → Enabled (forces the platform to ignore bad latency-tolerance signaling from a device)
+PCI Express Clock Gating / PCI Express Power Gating on the M.2 SSD1 port → Disabled
+CPU C-state limit under CPU Configuration / Power & Performance
+
+Once you've hit the Root Ports and the watchdog, save with F10 and you should be in good shape.
