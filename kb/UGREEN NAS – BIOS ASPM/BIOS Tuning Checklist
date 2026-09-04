@@ -1,0 +1,63 @@
+# UGREEN NAS – BIOS ASPM/PCIe Power Management Settings
+
+Reference checklist for disabling ASPM and related link power management
+settings in the BIOS (AMI Aptio Setup Utility) on a UGREEN NAS, to address
+PCIe/SATA link power state issues (drive dropouts, resets, etc.).
+
+## Entering the BIOS
+
+- Reboot the NAS and tap `Ctrl+F2` (or `Ctrl+F12` on some units) repeatedly
+  right at power-on. There is no on-screen prompt for this.
+- Alternative: enable SSH in UGOS, then run:
+
+  ```sh
+  sudo systemctl reboot --firmware-setup
+  ```
+
+  This sets an EFI flag so the next reboot drops straight into BIOS setup.
+
+## Settings to change
+
+### Chipset → System Agent (SA) Configuration → PCI Express Configuration
+
+Per-port ASPM control. Enter each of the following and set **ASPM** to
+**Disabled**:
+
+- [x] PCIE M.2 SSD1 — confirmed already `Disabled`
+- [ ] PCI Express Root Port 1
+- [ ] PCI Express Root Port 2
+- [ ] PCI Express Root Port 3
+
+### Advanced → SATA Configuration
+
+- [ ] **Aggressive LPM Support** → set to `Disabled` (was `Enabled`)
+- Leave `SATA Mode Selection` on `AHCI` and `SATA Test Mode` on `Disabled` — correct as-is.
+
+### Still to resolve
+
+- **BIOS watchdog timer** — not yet located this session. Forces a
+  reboot if UGOS isn't detected for a couple of minutes; find and disable
+  it (often under Advanced, sometimes a Super I/O/EC-related submenu) so
+  it doesn't interrupt future BIOS sessions.
+- All three Serial ATA ports showed `No Install`. If actual drive bays
+  were expected here and didn't show up, they're likely on a separate
+  controller (PCIe-attached SATA controller or backplane/expander) with
+  its own ASPM/LPM settings menu — check for that separately.
+
+## If problems persist after the above
+
+- **Chipset → System Agent (SA) Configuration → PCI Express Configuration →
+  SA PCIe LTR Configuration → Force LTR Override** → `Enabled`
+  (forces the platform to ignore bad latency-tolerance signaling from a device)
+- **PCI Express Clock Gating** / **PCI Express Power Gating** on the
+  M.2 SSD1 port → `Disabled`
+- CPU C-state limit, under `CPU Configuration` or `Power & Performance`
+
+## Notes
+
+- BIOS: AMI Aptio, version 2.22.1287, Alder Lake-N–style reference
+  implementation (evidenced by TCSS Platform Setting / VTIO / PMIC
+  charging entries under Advanced → Platform Settings, which are
+  leftovers from a laptop/tablet reference design and not relevant to
+  the NAS itself — don't touch those).
+- Save changes with `F10` before exiting.
